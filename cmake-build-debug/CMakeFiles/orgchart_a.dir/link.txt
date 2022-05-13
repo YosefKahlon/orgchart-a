@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/orgchart_a.dir/main.cpp.o  -o orgchart_a 
+/usr/bin/c++  -g   CMakeFiles/orgchart_a.dir/main.cpp.o CMakeFiles/orgchart_a.dir/OrgChart.cpp.o  -o orgchart_a 

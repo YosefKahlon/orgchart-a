@@ -123,6 +123,33 @@ orgchart_a/fast:
 	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/build
 .PHONY : orgchart_a/fast
 
+OrgChart.o: OrgChart.cpp.o
+
+.PHONY : OrgChart.o
+
+# target to build an object file
+OrgChart.cpp.o:
+	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/OrgChart.cpp.o
+.PHONY : OrgChart.cpp.o
+
+OrgChart.i: OrgChart.cpp.i
+
+.PHONY : OrgChart.i
+
+# target to preprocess a source file
+OrgChart.cpp.i:
+	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/OrgChart.cpp.i
+.PHONY : OrgChart.cpp.i
+
+OrgChart.s: OrgChart.cpp.s
+
+.PHONY : OrgChart.s
+
+# target to generate assembly for a file
+OrgChart.cpp.s:
+	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/OrgChart.cpp.s
+.PHONY : OrgChart.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... orgchart_a"
+	@echo "... OrgChart.o"
+	@echo "... OrgChart.i"
+	@echo "... OrgChart.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

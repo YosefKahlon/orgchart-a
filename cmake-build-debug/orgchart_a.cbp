@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/orgchart-a/OrgChart.cpp">
+			<Option target="orgchart_a"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/orgchart-a/OrgChart.hpp">
+			<Option target="orgchart_a"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/orgchart-a/main.cpp">
 			<Option target="orgchart_a"/>
 		</Unit>
