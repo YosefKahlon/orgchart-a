@@ -123,33 +123,6 @@ orgchart_a/fast:
 	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/build
 .PHONY : orgchart_a/fast
 
-OrgChart.o: OrgChart.cpp.o
-
-.PHONY : OrgChart.o
-
-# target to build an object file
-OrgChart.cpp.o:
-	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/OrgChart.cpp.o
-.PHONY : OrgChart.cpp.o
-
-OrgChart.i: OrgChart.cpp.i
-
-.PHONY : OrgChart.i
-
-# target to preprocess a source file
-OrgChart.cpp.i:
-	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/OrgChart.cpp.i
-.PHONY : OrgChart.cpp.i
-
-OrgChart.s: OrgChart.cpp.s
-
-.PHONY : OrgChart.s
-
-# target to generate assembly for a file
-OrgChart.cpp.s:
-	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/OrgChart.cpp.s
-.PHONY : OrgChart.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -177,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+sources/OrgChart.o: sources/OrgChart.cpp.o
+
+.PHONY : sources/OrgChart.o
+
+# target to build an object file
+sources/OrgChart.cpp.o:
+	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/sources/OrgChart.cpp.o
+.PHONY : sources/OrgChart.cpp.o
+
+sources/OrgChart.i: sources/OrgChart.cpp.i
+
+.PHONY : sources/OrgChart.i
+
+# target to preprocess a source file
+sources/OrgChart.cpp.i:
+	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/sources/OrgChart.cpp.i
+.PHONY : sources/OrgChart.cpp.i
+
+sources/OrgChart.s: sources/OrgChart.cpp.s
+
+.PHONY : sources/OrgChart.s
+
+# target to generate assembly for a file
+sources/OrgChart.cpp.s:
+	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/sources/OrgChart.cpp.s
+.PHONY : sources/OrgChart.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... orgchart_a"
-	@echo "... OrgChart.o"
-	@echo "... OrgChart.i"
-	@echo "... OrgChart.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... sources/OrgChart.o"
+	@echo "... sources/OrgChart.i"
+	@echo "... sources/OrgChart.s"
 .PHONY : help
 
 
