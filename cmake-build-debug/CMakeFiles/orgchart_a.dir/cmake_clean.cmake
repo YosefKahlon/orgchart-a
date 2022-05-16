@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/orgchart_a.dir/Demo.cpp.o"
   "CMakeFiles/orgchart_a.dir/main.cpp.o"
+  "CMakeFiles/orgchart_a.dir/sources/Iterator.cpp.o"
   "CMakeFiles/orgchart_a.dir/sources/OrgChart.cpp.o"
   "orgchart_a"
   "orgchart_a.pdb"

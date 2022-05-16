@@ -84,7 +84,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/orgchart-a/Demo.cpp">
+			<Option target="orgchart_a"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/orgchart-a/main.cpp">
+			<Option target="orgchart_a"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/Iterator.cpp">
 			<Option target="orgchart_a"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/OrgChart.cpp">

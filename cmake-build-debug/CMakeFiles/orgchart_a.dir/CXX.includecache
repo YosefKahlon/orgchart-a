@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/main.cpp
+iostream
+-
+iostream
+-
+fstream
+-
+sstream
+-
+stdexcept
+-
+sources/OrgChart.hpp
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/OrgChart.hpp
+
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/OrgChart.cpp
+OrgChart.hpp
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/OrgChart.hpp
+utility
+-
+
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/OrgChart.hpp
+utility
+-
+vector
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/vector
+string
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/string
+
