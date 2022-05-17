@@ -150,6 +150,33 @@ Demo.cpp.s:
 	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/Demo.cpp.s
 .PHONY : Demo.cpp.s
 
+Test.o: Test.cpp.o
+
+.PHONY : Test.o
+
+# target to build an object file
+Test.cpp.o:
+	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/Test.cpp.o
+.PHONY : Test.cpp.o
+
+Test.i: Test.cpp.i
+
+.PHONY : Test.i
+
+# target to preprocess a source file
+Test.cpp.i:
+	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/Test.cpp.i
+.PHONY : Test.cpp.i
+
+Test.s: Test.cpp.s
+
+.PHONY : Test.s
+
+# target to generate assembly for a file
+Test.cpp.s:
+	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/Test.cpp.s
+.PHONY : Test.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -243,6 +270,9 @@ help:
 	@echo "... Demo.o"
 	@echo "... Demo.i"
 	@echo "... Demo.s"
+	@echo "... Test.o"
+	@echo "... Test.i"
+	@echo "... Test.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

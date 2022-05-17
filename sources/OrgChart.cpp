@@ -14,43 +14,64 @@ OrgChart::OrgChart() {
     this->root = nullptr;
 
 }
+
 OrgChart::~OrgChart() {
     delete root;
 }
 
 
+//OrgChart::Node *OrgChart::find_Node(const std::string& name) {
+//    if (  this->map.find(name) == this->map.end() )
+//        return this.
+//    else
+//        std::cout << got->first << " is " << got->second;
+//
+//    std::cout << std::endl;
+//}
+
 
 OrgChart &OrgChart::add_root(const string &root_) {
 
-//    if (this->root == nullptr) {
-//        this->root = new Node;
-//    }
-//
+    if (this->root == nullptr) {
+        this->root = new Node;
+        this->root->title = root_;
+        this->map.insert({root_,*this->root});
+    }
+
 //    if (!this->find_title(root_)) {
 //        this->exist.push_back(root_);
 //        this->root->title = root_;
 //    }
-//
-//    //this->root->parent = nullptr;
+    this->root->degree = 0;
+    std::vector<Node*> level;
+    level.push_back(this->root);
+    this->map_d.insert({0,level});
+    v.push_back(root);
+    this->root->parent = nullptr;
 
     return *this;
 
 }
 
-OrgChart &OrgChart::add_sub(const string &root_, const string& other) {
+
+OrgChart &OrgChart::add_sub(const string &root_, const string &other) {
+
+    Node *child_ = new Node();
+    child_->title = other;
+    child_->degree = this->map.at(root_).degree+1;
+    child_->parent = &(this->map.at(root_));
+
+
+    this->map.at(root_).child.push_back(child_);
+    this->map.insert({other,*child_});
+
+    this->map_d.insert({child_->degree,child_->parent->child});
+
+    v.push_back(child_);
 
 //    if (!find_title(root_)) {
 //        throw std::invalid_argument("First argument is not exist !");
 //    }
-
-//    Node *child_ = new Node();
-//    child_->title = other;
-//    &(child_->parent = find_p_node(root_);
-//    this->exist.push_back(other);
-//
-//    std::cout << (this)->find_p_node(root_).title << std::endl;
-
-    //child_->parent->child.push_back(*child_);
 
     return *this;
 }
@@ -59,18 +80,36 @@ OrgChart &OrgChart::add_sub(const string &root_, const string& other) {
 std::ostream &ariel::operator<<(std::ostream &os, const OrgChart &output) {
 
 //    os << output.root->title;
-//    os << "\n";
-    //os << output.root->child.at(0).title;
+//    os << "\n  ----- \n";
+//    os << "---------|";
+//    for (size_t i = 0; i < output.root->child.size(); ++i) {
+//        os << output.root->child.at(i)->title;
+//        os << "---------|";
+//    }
+
+//    os << output.map.at(output.root->title);
+//
+//    os << "," <<output.map.at(output.root->title).child.at(0)->title;
+//
+
+    for (const auto& pair: output.map) {
+        os << pair.first;
+        os << "\n";
+    }
+
 
     return os;
 }
 
 OrgChart::level_order OrgChart::begin_level_order() {
-    return OrgChart::level_order();
+    return level_order{*this};
 }
 
 OrgChart::level_order OrgChart::end_level_order() {
-    return OrgChart::level_order();
+    auto it = level_order(OrgChart());
+
+    return it;
+   // return level_order{OrgChart()};
 }
 
 OrgChart::reverse_Order OrgChart::begin_reverse_order() {
@@ -90,12 +129,15 @@ OrgChart::pre_order OrgChart::end_preorder() {
 }
 
 OrgChart::level_order OrgChart::begin() {
-    return OrgChart::level_order();
+    return  level_order{*this};
 }
 
+
+//no need to check the end
 OrgChart::level_order OrgChart::end() {
-    return OrgChart::level_order();
+    return level_order{OrgChart()};
 }
+
 
 
 

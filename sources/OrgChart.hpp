@@ -8,6 +8,7 @@
 #include <utility>
 #include "vector"
 #include "string"
+#include "unordered_map"
 
 using std::string;
 namespace ariel {
@@ -18,37 +19,54 @@ namespace ariel {
         //-------------------------Node-------------------------------
         class Node {
         public:
-            std::vector<Node> child;
+            std::vector<Node*> child;
             std::string title;
             Node *parent;
             int size_;
+            int start;
+            int degree;
+            std::unordered_map<int,std::vector<Node*>>* mapppppppp;
+
+
 
 
         public:
-
-            Node() {
+            Node(/*std::string &title_ */) {
                 this->parent = nullptr;
+                this->start = 0;
+             //   this->title = title_;
+
+
             }
 
             friend std::ostream &operator<<(std::ostream &os, const Node &output) {
+                os << output.title ;
+
                 return os;
             }
 
-            int size() {
+            int size() const {
                 return this->size_;
             }
 
         };
 
-    public:
+
+        //-----------------------OrgChart---------------------------------
+    public :
 
         Node *root;
-
+        std::unordered_map<std::string ,Node> map;
+        std::unordered_map<int,std::vector<Node*>> map_d;
+        std::vector<Node*> v;
         OrgChart();
         ~OrgChart();
 
         OrgChart &add_root(const string &root_);
         OrgChart &add_sub(const string &root_, const string &other);
+
+       // Node* find_Node(const string& name);
+
 
 
     public:
@@ -60,36 +78,41 @@ namespace ariel {
 
         private:
             Node *pointer_to_current_node;
+           const  OrgChart &org;
+          size_t index;
+
         public:
 
             // copy constructor
-            level_order(Node *ptr = nullptr) : pointer_to_current_node(ptr) {}
+            level_order(const OrgChart &organization , Node * ptr = nullptr) :
+            org(organization),
+            pointer_to_current_node(ptr),
+            index(0){}
 
             // Note that the method is const as this operator does not
             // allow changing of the iterator.
-            Node &operator*() const;
-            Node *operator->() const;
-            Node *operator=(Node &other) const;
+            const Node &operator*() const;
+            const Node *operator->() const;
+            Node &operator=(const Node &other);
             Node *operator&() const;
 
 
             // i++;
             // Usually iterators are passed by value and not by const& as they are small.
             level_order operator++(int);
-            level_order operator++() ;
+            level_order& operator++() ;
 
 
-            bool operator==(const level_order &);
-            bool operator!=(const level_order &);
+            bool operator==(const level_order &) const ;
+            bool operator!=(const level_order &) const ;
 
+            std::string find_map(int degree);
         };
 
 
         level_order begin_level_order();
         level_order end_level_order();
 
-//        level_order begin();
-//        level_order end();
 
     public:
         class reverse_Order {
@@ -157,6 +180,7 @@ namespace ariel {
         friend  class level_order;
         friend  class reverse_order;
         friend  class pre_order;
+
     };
 
 
