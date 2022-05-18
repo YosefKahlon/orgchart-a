@@ -5,8 +5,6 @@ CMakeFiles/orgchart_a.dir/Demo.cpp.o: ../Demo.cpp
 CMakeFiles/orgchart_a.dir/Demo.cpp.o: ../sources/OrgChart.hpp
 
 CMakeFiles/orgchart_a.dir/Test.cpp.o: ../Test.cpp
-CMakeFiles/orgchart_a.dir/Test.cpp.o: ../doctest.h
-CMakeFiles/orgchart_a.dir/Test.cpp.o: ../sources/OrgChart.hpp
 
 CMakeFiles/orgchart_a.dir/main.cpp.o: ../main.cpp
 
