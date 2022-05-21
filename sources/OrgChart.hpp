@@ -66,7 +66,7 @@ namespace ariel {
 
         ~OrgChart() {
 
-            delete root;
+
             for(auto x : map_degree){
                 for (size_t i = 0; i < x.second.size(); ++i) {
                     delete  x.second.at(i);
@@ -90,45 +90,38 @@ namespace ariel {
 
 
 
-//    public:
-        //-------------------------------------------------------------------
-        // iterator related code:
-        // inner class and methods that return instances of it)
-        //-------------------------------------------------------------------
-        class level_order {
-
-        private:
+        class Iterator{
+        protected:
             Node *pointer_to_current_node;
             const OrgChart &org;
+        public:
+            Iterator(const OrgChart &organization, Node *ptr) :
+                    org(organization),
+                    pointer_to_current_node(ptr){}
+
+
+
+            string &operator*();
+            const Node *operator->() const;
+
+            bool operator==(const Iterator &) const;
+            bool operator!=(const Iterator &) const;
+
+        };
+
+
+
+        class level_order : public Iterator{
+
+        private:
             size_t index;
 
         public:
-
-            // copy constructor
             level_order(const OrgChart &organization, Node *ptr) :
-                    org(organization),
-                    pointer_to_current_node(ptr),
-                    index(1) {}
+                    Iterator(organization, ptr), index(1) {}
 
-            // Note that the method is const as this operator does not
-            // allow changing of the iterator.
-            string &operator*();
-
-            const Node *operator->() const;
-            // level_order  &operator = (const level_order &other) = default;
-            //  Node *operator&() const;
-
-
-            // i++;
-            // Usually iterators are passed by value and not by const& as they are small.
             level_order operator++(int);
-
             level_order &operator++();
-
-
-            bool operator==(const level_order &) const;
-
-            bool operator!=(const level_order &) const;
 
             std::string find_map(int degree);
         };
@@ -140,68 +133,41 @@ namespace ariel {
 
 
 //    public:
-        class reverse_Order {
+        class reverse_Order  : public  Iterator{
 
         private:
-            Node *pointer_to_current_node;
-            const OrgChart &org;
+//            Node *pointer_to_current_node;
+//            const OrgChart &org;
             int index;
             int de;
 
         public:
 
-            // copy constructor
+
             reverse_Order(const OrgChart &organization, Node *ptr) :
-                    org(organization),
-                    pointer_to_current_node(ptr),
-                    de(organization.map_degree.size() - 1),
-                    index(1) {}
+                    Iterator(organization, ptr),de(organization.map_degree.size() - 1), index(1) {}
 
-
-            // Note that the method is const as this operator does not
-            // allow changing of the iterator.
-            string &operator*();
-
-            const Node *operator->() const;
-            //    level_order  &operator = (const level_order &other) = default;
-            //  Node *operator&() const;
-
-
-            // i++;
-            // Usually iterators are passed by value and not by const& as they are small.
             reverse_Order operator++(int);
-
             reverse_Order &operator++();
 
-
-            bool operator==(const reverse_Order &) const;
-
-            bool operator!=(const reverse_Order &) const;
 
         };
 
         reverse_Order begin_reverse_order() const;
-
         reverse_Order reverse_order() const;
 
 
-//    public:
 
-        class pre_order {
+
+        class pre_order : public Iterator {
         private:
-            Node *pointer_to_current_node;
-            const OrgChart &org;
-            size_t index;
 
             std::stack<Node *> stack;
 
         public:
 
-            // copy constructor
             pre_order(const OrgChart &organization, Node *ptr) :
-                    org(organization),
-                    pointer_to_current_node(ptr),
-                    index(0) {
+                    Iterator(organization, ptr) {
 
                 stack.push(nullptr);
                 if (pointer_to_current_node != nullptr) {
@@ -217,25 +183,11 @@ namespace ariel {
 
             }
 
-            // Note that the method is const as this operator does not
-            // allow changing of the iterator.
-            string &operator*();
 
-            const Node *operator->() const;
-            //    level_order  &operator = (const level_order &other) = default;
-            //  Node *operator&() const;
-
-
-            // i++;
-            // Usually iterators are passed by value and not by const& as they are small.
             pre_order operator++(int);
 
             pre_order &operator++();
 
-
-            bool operator==(const pre_order &) const;
-
-            bool operator!=(const pre_order &) const;
 
         };
 

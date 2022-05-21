@@ -59,7 +59,7 @@ OrgChart &OrgChart::add_sub(const string &root_, string other) {
     this->map.at(root_)->child.push_back(child_);
 
 
-   this->map.insert({other, child_});
+    this->map.insert({other, child_});
 
 
     if (map_degree.find(child_->degree) == map_degree.end()) {
@@ -70,7 +70,7 @@ OrgChart &OrgChart::add_sub(const string &root_, string other) {
 
         this->map_degree.at(child_->degree).push_back(child_);
 
-   }
+    }
 
 
     return *this;
@@ -112,7 +112,7 @@ OrgChart::level_order OrgChart::begin() const {
 
 //no need to check the end
 OrgChart::level_order OrgChart::end() const {
-    auto it = level_order(*this, this->root);
+    auto it = level_order(*this, nullptr);
     return it;
 }
 
@@ -129,7 +129,7 @@ OrgChart::pre_order OrgChart::begin_preorder() const {
 }
 
 OrgChart::pre_order OrgChart::end_preorder() const {
-    return OrgChart::pre_order(ariel::OrgChart(), nullptr);
+    return OrgChart::pre_order(*this, nullptr);
 }
 
 OrgChart &OrgChart::operator=(OrgChart &&other) noexcept {

@@ -44,7 +44,7 @@ int main() {
 
 
     for (auto it=organization.begin_preorder(); it!=organization.end_preorder(); ++it) {
-        cout << (*it) << " ---  \n" ;
+        cout << (*it) << " " ;
     }  // prints: CEO CTO VP_SW CFO COO VP_BI
 //
 //    for (auto element : organization)
