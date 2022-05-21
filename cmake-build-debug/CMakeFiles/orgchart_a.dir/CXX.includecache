@@ -6,17 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/97252/Documents/GitHub/orgchart-a/Demo.cpp
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/main.cpp
 iostream
--
-fstream
--
-sstream
--
-stdexcept
 -
 sources/OrgChart.hpp
 /mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/OrgChart.hpp
+sources/Node.hpp
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/Node.hpp
+
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/Iterator.cpp
+OrgChart.hpp
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/OrgChart.hpp
+iostream
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/iostream
+
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/Node.hpp
+vector
+-
+string
+-
+
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/OrgChart.cpp
+OrgChart.hpp
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/OrgChart.hpp
+utility
+-
+algorithm
+-
+iostream
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/iostream
 
 /mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/OrgChart.hpp
 utility
@@ -27,4 +45,6 @@ string
 /mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/string
 unordered_map
 /mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/unordered_map
+Node.hpp
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/Node.hpp
 

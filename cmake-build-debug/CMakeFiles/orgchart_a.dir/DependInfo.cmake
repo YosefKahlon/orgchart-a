@@ -4,10 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/97252/Documents/GitHub/orgchart-a/Demo.cpp" "/mnt/c/Users/97252/Documents/GitHub/orgchart-a/cmake-build-debug/CMakeFiles/orgchart_a.dir/Demo.cpp.o"
-  "/mnt/c/Users/97252/Documents/GitHub/orgchart-a/Test.cpp" "/mnt/c/Users/97252/Documents/GitHub/orgchart-a/cmake-build-debug/CMakeFiles/orgchart_a.dir/Test.cpp.o"
   "/mnt/c/Users/97252/Documents/GitHub/orgchart-a/main.cpp" "/mnt/c/Users/97252/Documents/GitHub/orgchart-a/cmake-build-debug/CMakeFiles/orgchart_a.dir/main.cpp.o"
   "/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/Iterator.cpp" "/mnt/c/Users/97252/Documents/GitHub/orgchart-a/cmake-build-debug/CMakeFiles/orgchart_a.dir/sources/Iterator.cpp.o"
+  "/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/Node.cpp" "/mnt/c/Users/97252/Documents/GitHub/orgchart-a/cmake-build-debug/CMakeFiles/orgchart_a.dir/sources/Node.cpp.o"
   "/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/OrgChart.cpp" "/mnt/c/Users/97252/Documents/GitHub/orgchart-a/cmake-build-debug/CMakeFiles/orgchart_a.dir/sources/OrgChart.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")

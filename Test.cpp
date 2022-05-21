@@ -26,7 +26,7 @@ TEST_CASE ("Test 1 ") {
             CHECK_THROWS(organization.add_sub("unknown2", "CFO"));
             CHECK_THROWS(organization.add_sub("unknown3", "VP_BI"));
 
-    //VP_BI is child of COO
+
             CHECK_THROWS(organization.add_sub("CEO", "CTO"));// Now the CTO is subordinate to the CEO
             CHECK_THROWS(organization.add_sub("CEO", "CFO"));// Now the CFO is subordinate to the CEO
             CHECK_THROWS(organization.add_sub("CEO", "COO"));//

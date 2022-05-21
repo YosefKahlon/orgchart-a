@@ -123,60 +123,6 @@ orgchart_a/fast:
 	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/build
 .PHONY : orgchart_a/fast
 
-Demo.o: Demo.cpp.o
-
-.PHONY : Demo.o
-
-# target to build an object file
-Demo.cpp.o:
-	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/Demo.cpp.o
-.PHONY : Demo.cpp.o
-
-Demo.i: Demo.cpp.i
-
-.PHONY : Demo.i
-
-# target to preprocess a source file
-Demo.cpp.i:
-	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/Demo.cpp.i
-.PHONY : Demo.cpp.i
-
-Demo.s: Demo.cpp.s
-
-.PHONY : Demo.s
-
-# target to generate assembly for a file
-Demo.cpp.s:
-	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/Demo.cpp.s
-.PHONY : Demo.cpp.s
-
-Test.o: Test.cpp.o
-
-.PHONY : Test.o
-
-# target to build an object file
-Test.cpp.o:
-	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/Test.cpp.o
-.PHONY : Test.cpp.o
-
-Test.i: Test.cpp.i
-
-.PHONY : Test.i
-
-# target to preprocess a source file
-Test.cpp.i:
-	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/Test.cpp.i
-.PHONY : Test.cpp.i
-
-Test.s: Test.cpp.s
-
-.PHONY : Test.s
-
-# target to generate assembly for a file
-Test.cpp.s:
-	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/Test.cpp.s
-.PHONY : Test.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -231,6 +177,33 @@ sources/Iterator.cpp.s:
 	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/sources/Iterator.cpp.s
 .PHONY : sources/Iterator.cpp.s
 
+sources/Node.o: sources/Node.cpp.o
+
+.PHONY : sources/Node.o
+
+# target to build an object file
+sources/Node.cpp.o:
+	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/sources/Node.cpp.o
+.PHONY : sources/Node.cpp.o
+
+sources/Node.i: sources/Node.cpp.i
+
+.PHONY : sources/Node.i
+
+# target to preprocess a source file
+sources/Node.cpp.i:
+	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/sources/Node.cpp.i
+.PHONY : sources/Node.cpp.i
+
+sources/Node.s: sources/Node.cpp.s
+
+.PHONY : sources/Node.s
+
+# target to generate assembly for a file
+sources/Node.cpp.s:
+	$(MAKE) -f CMakeFiles/orgchart_a.dir/build.make CMakeFiles/orgchart_a.dir/sources/Node.cpp.s
+.PHONY : sources/Node.cpp.s
+
 sources/OrgChart.o: sources/OrgChart.cpp.o
 
 .PHONY : sources/OrgChart.o
@@ -267,18 +240,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... orgchart_a"
-	@echo "... Demo.o"
-	@echo "... Demo.i"
-	@echo "... Demo.s"
-	@echo "... Test.o"
-	@echo "... Test.i"
-	@echo "... Test.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... sources/Iterator.o"
 	@echo "... sources/Iterator.i"
 	@echo "... sources/Iterator.s"
+	@echo "... sources/Node.o"
+	@echo "... sources/Node.i"
+	@echo "... sources/Node.s"
 	@echo "... sources/OrgChart.o"
 	@echo "... sources/OrgChart.i"
 	@echo "... sources/OrgChart.s"

@@ -99,7 +99,7 @@ OrgChart::level_order OrgChart::begin_level_order() const {
 }
 
 OrgChart::level_order OrgChart::end_level_order() const {
-    auto it = level_order(*this, nullptr);
+    auto it = level_order(<#initializer#>, nullptr);
 
     return it;
 
@@ -115,7 +115,7 @@ OrgChart::level_order OrgChart::begin() const {
 
 //no need to check the end
 OrgChart::level_order OrgChart::end() const {
-    auto it = level_order(*this, this->root);
+    auto it = level_order(<#initializer#>, nullptr);
     return it;
 }
 
@@ -134,28 +134,27 @@ OrgChart::pre_order OrgChart::begin_preorder() const {
 OrgChart::pre_order OrgChart::end_preorder() const {
     return OrgChart::pre_order(ariel::OrgChart(), nullptr);
 }
-
-OrgChart &OrgChart::operator=(OrgChart && other) noexcept {
-    // Guard self assignment
-    if (this == &other) {
-        return *this;}
-    return *this;
-}
-
-OrgChart &OrgChart::operator=(const OrgChart &other) noexcept {
-    if (this == &other) {
-        return *this;}
-    return *this;
-}
-
-OrgChart::OrgChart(OrgChart &&org) noexcept {
-    return;
-}
+//
+//OrgChart &OrgChart::operator=(OrgChart && other) noexcept {
+//    // Guard self assignment
+//    if (this == &other) {
+//        return *this;}
+//    return *this;
+//}
+//
+//OrgChart &OrgChart::operator=(const OrgChart &other) noexcept {
+//    if (this == &other) {
+//        return *this;}
+//    return *this;
+//}
+//
+//OrgChart::OrgChart(OrgChart &&org) noexcept {
+//    return;
+//}
 
 //OrgChart::OrgChart(OrgChart &&other) noexcept {
 //    if (this == &other)
 //        return OrgChart::OrgChart(); //
 //}
-
 
 

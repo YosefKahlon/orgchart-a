@@ -1,20 +1,21 @@
-//#include <iostream>
-//
-//
-//#include <iostream>
-//#include <fstream>
-//#include <sstream>
-//#include <stdexcept>
-//
-//using namespace std;
-//
-//#include "sources/OrgChart.hpp"
-//
-//using namespace ariel;
-//
-//int main() {
-//    OrgChart organization;
-//    organization.add_root("CEO");
-//    cout << organization << endl;
-//    return 0;
-//}
+#include <iostream>
+
+
+using namespace std;
+
+#include "sources/OrgChart.hpp"
+#include "sources/Node.hpp"
+using namespace ariel;
+
+int main() {
+
+    OrgChart organization ;
+    organization.add_root("ceo");
+
+    auto it = organization.begin_level_order();
+    cout << *it << endl;
+
+
+
+    return 0;
+}
