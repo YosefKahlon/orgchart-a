@@ -6,6 +6,9 @@
 #define ORGCHART_A_ORGCHART_HPP
 
 #include <utility>
+#include <stack>
+#include <algorithm>
+#include <iostream>
 #include "vector"
 #include "string"
 #include "unordered_map"
@@ -53,20 +56,31 @@ namespace ariel {
     private:
 
         Node *root;
-        std::unordered_map<std::string, Node> map;
+        std::unordered_map<std::string, Node *> map;
         std::unordered_map<int, std::vector<Node *>> map_degree;
 
     public:
         OrgChart() : root(nullptr) {};
-        OrgChart(const OrgChart & org);
+
+        OrgChart(const OrgChart &org);
 
         ~OrgChart() {
 
             delete root;
+            for(auto x : map_degree){
+                for (size_t i = 0; i < x.second.size(); ++i) {
+                    delete  x.second.at(i);
+                }
+
+            }
+
         }
-           OrgChart& operator=(OrgChart&&) noexcept;
-           OrgChart(OrgChart&& org) noexcept;
-        OrgChart& operator=( const OrgChart& other) noexcept;
+
+        OrgChart &operator=(OrgChart &&) noexcept;
+
+        OrgChart(OrgChart &&org) noexcept;
+
+        OrgChart &operator=(const OrgChart &other) noexcept;
 
         OrgChart &add_root(string root_);
 
@@ -131,7 +145,8 @@ namespace ariel {
         private:
             Node *pointer_to_current_node;
             const OrgChart &org;
-            size_t index;
+            int index;
+            int de;
 
         public:
 
@@ -139,7 +154,9 @@ namespace ariel {
             reverse_Order(const OrgChart &organization, Node *ptr) :
                     org(organization),
                     pointer_to_current_node(ptr),
+                    de(organization.map_degree.size() - 1),
                     index(1) {}
+
 
             // Note that the method is const as this operator does not
             // allow changing of the iterator.
@@ -176,13 +193,29 @@ namespace ariel {
             const OrgChart &org;
             size_t index;
 
+            std::stack<Node *> stack;
+
         public:
 
             // copy constructor
             pre_order(const OrgChart &organization, Node *ptr) :
                     org(organization),
                     pointer_to_current_node(ptr),
-                    index(1) {}
+                    index(0) {
+
+                stack.push(nullptr);
+                if (pointer_to_current_node != nullptr) {
+                    stack.pop();
+                    std::vector<Node *> preorder = this->pointer_to_current_node->child;
+
+                    for (int i = preorder.size() - 1; i >= 0; i--) {
+                        stack.push(preorder.at((unsigned long) i));
+
+                    }
+
+                }
+
+            }
 
             // Note that the method is const as this operator does not
             // allow changing of the iterator.

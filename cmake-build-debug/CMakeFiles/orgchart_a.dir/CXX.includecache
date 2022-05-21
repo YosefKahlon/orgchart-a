@@ -6,20 +6,20 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/97252/Documents/GitHub/orgchart-a/Demo.cpp
-iostream
--
-fstream
--
-sstream
--
-stdexcept
--
-sources/OrgChart.hpp
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/Iterator.cpp
+OrgChart.hpp
 /mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/OrgChart.hpp
+iostream
+/mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/iostream
 
 /mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/OrgChart.hpp
 utility
+-
+stack
+-
+algorithm
+-
+iostream
 -
 vector
 /mnt/c/Users/97252/Documents/GitHub/orgchart-a/sources/vector
